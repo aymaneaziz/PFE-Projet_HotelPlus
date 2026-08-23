@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="740.0" prefWidth="629.0" stylesheets="@CSS/ADDform.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotel.ChambreEditFormController">
+   <children>
+      <GridPane hgap="10" layoutX="129.0" layoutY="14.0" styleClass="form-container" vgap="10">
+         <children>
+            <Label text="N° Chambre:" GridPane.rowIndex="1" />
+            <TextField fx:id="Nchambre" promptText="Numéro de la chambre" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Nom de l'hôtel:" GridPane.rowIndex="2" />
+            <ComboBox fx:id="hotelName" minWidth="200.0" prefHeight="25.0" prefWidth="200.0" promptText="Hotel X" stylesheets="@CSS/ComboBoxCSS.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Type:" GridPane.rowIndex="3" />
+            <ComboBox fx:id="typeChambre" minWidth="200.0" prefHeight="25.0" prefWidth="200.0" promptText="Type de la chambre" stylesheets="@CSS/ComboBoxCSS.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Prix:" GridPane.rowIndex="4" />
+            <TextField fx:id="prixChambre" promptText="Prix de la chambre" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label text="Type de l'Offre:" GridPane.rowIndex="6" />
+            <ComboBox fx:id="offreChambre" minWidth="200.0" prefHeight="42.0" prefWidth="200.0" promptText="Spécial ou Promotion" stylesheets="@CSS/ComboBoxCSS.css" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label text="Description:" GridPane.rowIndex="9" />
+            <TextArea fx:id="description" prefHeight="200.0" prefWidth="200.0" promptText="Description de la chambre" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Label text="Statut:" GridPane.rowIndex="10" />
+            <ComboBox fx:id="Statue" minWidth="200.0" prefHeight="25.0" prefWidth="200.0" promptText="Statut de la chambre" stylesheets="@CSS/ComboBoxCSS.css" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <Label text="Offre Spéciale:" GridPane.rowIndex="7" />
+            <TextArea fx:id="offreSpecial" prefHeight="62.0" prefWidth="200.0" promptText="Description de l'offre spéciale" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <HBox alignment="CENTER" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="11">
+               <children>
+                  <Button fx:id="addButton" onAction="#edit" styleClass="primary-button" text="Modifier" />
+                  <Button fx:id="cancelButton" onAction="#cancel" styleClass="secondary-button" text="Annuler" />
+               </children>
+            </HBox>
+            <TextField fx:id="OffreDescription" promptText="Pourcentage de Promotion" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Button mnemonicParsing="false" onAction="#option" prefWidth="151.0" styleClass="primary-button" text="Gestion des option" GridPane.rowIndex="11" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints minWidth="150.0" />
+            <ColumnConstraints minWidth="200.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+      </GridPane>
+      <Label fx:id="errorLabel" layoutX="176.0" layoutY="659.0" prefHeight="25.0" prefWidth="299.0" styleClass="error-label" textFill="RED" />
+   </children>
+</AnchorPane>

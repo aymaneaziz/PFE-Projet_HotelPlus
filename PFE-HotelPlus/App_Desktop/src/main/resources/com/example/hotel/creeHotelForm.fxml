@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="MainPane" prefHeight="800.0" prefWidth="1200.0" stylesheets="@CSS/creeEntrepriseForm.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotel.CreeHotelFormController">
+   <children>
+      <VBox fx:id="PrincipleVBOX" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="676.0" prefWidth="1078.0" spacing="20" style="-fx-background-color: d9d9d9;">
+         <children>
+            <VBox fx:id="CenterVBox" alignment="CENTER" maxHeight="1000.0" maxWidth="520.0" prefHeight="634.0" prefWidth="520.0">
+               <children>
+                  <Label fx:id="LabelEntreprise" text="Créer Votre Premier hôtel" />
+                  <Label fx:id="LabelNom" prefHeight="20.0" prefWidth="400.0" text="Nom de l'hôtel" />
+                  <TextField fx:id="hotelName" maxWidth="400.0" minHeight="39.0" promptText="Entrez le nom de l'hôtel'" />
+                  <Label fx:id="LabelCountry" prefHeight="20.0" prefWidth="400.0" text="Pays" />
+                  <TextField fx:id="hotelCountry" maxWidth="400.0" minHeight="39.0" promptText="Entrez le pays ou se trouve l'hôtel" />
+                  <Label fx:id="LabelCity" layoutX="21.0" layoutY="114.0" prefHeight="20.0" prefWidth="400.0" text="Ville" />
+                  <TextField fx:id="hotelCity" layoutX="20.0" layoutY="142.0" maxWidth="400.0" minHeight="39.0" promptText="Entrez la ville ou se trouve l'hôtel" />
+                  <Label fx:id="LabelAddress" layoutX="21.0" layoutY="147.0" prefHeight="20.0" prefWidth="400.0" text="Adresse" />
+                  <TextField fx:id="hotelAddress" layoutX="20.0" layoutY="175.0" maxWidth="400.0" minHeight="39.0" promptText="Entrez l'adresse de l'hôtel" />
+                  <Label fx:id="LabelType" layoutX="21.0" layoutY="280.0" prefHeight="20.0" prefWidth="400.0" text="Type" />
+                  <ComboBox fx:id="hotelType" maxWidth="400.0" promptText="Choissir le type de votre hôtel" stylesheets="@CSS/ComboBoxCSS.css" />
+                  <GridPane maxWidth="232.0" minHeight="25.0" minWidth="232.0" prefHeight="25.0" prefWidth="232.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.0" minWidth="10.0" prefWidth="125.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="108.0" minWidth="10.0" prefWidth="103.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label prefHeight="20.0" prefWidth="138.0" text="Nombre d'étoiles :" />
+                        <TextField fx:id="hotelStars" prefHeight="29.0" prefWidth="126.0" promptText="Max:5" GridPane.columnIndex="1" />
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="144.0" layoutY="421.0" maxWidth="232.0" minHeight="25.0" minWidth="500.0" prefHeight="25.0" prefWidth="232.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.0" minWidth="10.0" prefWidth="95.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="110.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="108.0" minWidth="10.0" prefWidth="95.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="112.0" minWidth="10.0" prefWidth="110.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label prefHeight="20.0" prefWidth="139.0" text="        Longitude :    " />
+                        <TextField fx:id="Longitude" prefHeight="29.0" prefWidth="110.0" promptText="Double" GridPane.columnIndex="1" />
+                        <TextField fx:id="Latitude" prefHeight="29.0" prefWidth="110.0" promptText="Double" GridPane.columnIndex="3" />
+                        <Label prefHeight="20.0" prefWidth="109.0" text="       Latitude :   " GridPane.columnIndex="2" />
+                     </children>
+                  </GridPane>
+                  <Label prefHeight="38.0" prefWidth="0.0" />
+                  <GridPane fx:id="GridPaneButtons" maxHeight="60.0" maxWidth="200.0" minHeight="15.0" minWidth="50.0" prefHeight="30.0" prefWidth="100.0">
+                     <columnConstraints>
+                        <ColumnConstraints prefWidth="100.0" />
+                        <ColumnConstraints prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints prefHeight="30.0" />
+                     </rowConstraints>
+                     <children>
+                        <Button fx:id="confirmButton" onAction="#confirmSave" prefHeight="40.0" prefWidth="142.0" text="Confirmer" />
+                        <Button fx:id="cancelButton" onAction="#confirmCancel" prefHeight="40.0" prefWidth="104.0" text="Annuler" GridPane.columnIndex="1" />
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+            <Label fx:id="ErrorMessage" prefHeight="40.0" prefWidth="521.0" style="-fx-alignment: center; -fx-font-size: 20;" text="" />
+         </children>
+      </VBox>
+   </children>
+</StackPane>

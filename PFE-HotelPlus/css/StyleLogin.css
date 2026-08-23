@@ -1,0 +1,243 @@
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #2C3E50;
+    --success-color: #2ECC71;
+    --error-color: #E74C3C;
+    --background-color: #F5F6FA;
+    --box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: rgb(215, 215, 215);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    padding: 2px;
+    max-width: 1000px;
+}
+
+.login-box {
+    background: rgb(255, 255, 255);
+    padding: 1rem 2.5rem;
+    border-radius: 16px;
+    box-shadow: var(--box-shadow);
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.logo h1 {
+    color: var(--secondary-color);
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.logo p {
+    color: #666;
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    transition: color 0.3s ease;
+}
+
+.input-with-icon input {
+    padding-left: 2.5rem !important;
+}
+
+.input-with-icon input:focus+i {
+    color: var(--primary-color);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #F8F9FA;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.1);
+}
+
+.password-hint {
+    display: block;
+    margin-top: 0.5rem;
+    color: #666;
+    font-size: 0.8rem;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.remember-me input[type="checkbox"] {
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.remember-me label {
+    color: #666;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    background: #0090FF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.button-loader {
+    margin-left: 8px;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.signup-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.signup-link a:hover {
+    color: #357ABD;
+}
+
+.error-message {
+    background: #FFEBEE;
+    color: var(--error-color);
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+@media (max-width: 480px) {
+    .login-box {
+        padding: 1.5rem;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        padding: 0.8rem;
+    }
+
+    .input-group input {
+        font-size: 0.95rem;
+    }
+}

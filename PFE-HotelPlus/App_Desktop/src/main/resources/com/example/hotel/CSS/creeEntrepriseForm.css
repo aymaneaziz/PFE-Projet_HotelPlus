@@ -1,0 +1,105 @@
+/* Centrer tout le contenu du StackPane */
+#MainPane {
+    -fx-alignment: center;
+    -fx-font-size: 14px;
+    -fx-font-family: "Open Sans", sans-serif; /* Changer la police des labels */
+}
+
+/* Centrer et réduire la taille du VBox principal */
+#PrincipleVBOX {
+    -fx-alignment: center;
+    -fx-spacing: 15px;
+    -fx-pref-width: 500px; /* Réduction de la largeur */
+    -fx-padding: 20px;
+    -fx-background-color: #f4f4f4;
+    -fx-border-radius: 10px;
+    -fx-border-color: #dcdcdc;
+    -fx-border-width: 1px;
+}
+
+/* Réduire la taille des sous-sections */
+#CenterVBox, #CreateAccount {
+    -fx-alignment: center;
+    -fx-spacing: 8px;
+    -fx-pref-width: 100%;
+    -fx-padding: 10px;
+}
+
+#CenterVBox {
+    -fx-background-color: white;
+    -fx-padding: 1rem 2.5rem;
+    -fx-background-radius: 16px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 4);
+    -fx-max-width: 500px;
+    -fx-alignment: center;
+}
+
+/* Animation Slide Up */
+@keyframes slideUp {
+    from {
+        -fx-translate-y: 20px;
+        -fx-opacity: 0;
+    }
+    to {
+        -fx-translate-y: 0;
+        -fx-opacity: 1;
+    }
+}
+
+
+/* Style des labels (titres et sous-titres) */
+Label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #2c3e50;
+}
+
+/* Style des grands titres */
+#LabelEntreprise, #LabelAccount {
+    -fx-font-size: 30px;
+    -fx-text-fill: #007bff; /* Bleu vif */
+    -fx-font-weight: bold;
+    -fx-padding: 5px;
+    -fx-alignment: center;
+}
+
+/* Champs de texte et mots de passe */
+TextField, PasswordField {
+    -fx-pref-height: 30px;
+    -fx-pref-width: 100%;
+    -fx-padding: 5px;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 5px;
+    -fx-background-color: #ffffff;
+}
+
+/* Style des boutons */
+Button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 5, 0, 0, 1);
+}
+
+Button:hover {
+    -fx-background-color: #2980b9;
+}
+
+/* Bouton Annuler en rouge */
+#cancelButton {
+    -fx-background-color: #e74c3c;
+}
+
+#cancelButton:hover {
+    -fx-background-color: #c0392b;
+}
+
+/* Message d'erreur */
+#ErrorMessage {
+    -fx-text-fill: red;
+    -fx-font-size: 12px;
+    -fx-padding: 5px;
+    -fx-font-weight: bold;
+}

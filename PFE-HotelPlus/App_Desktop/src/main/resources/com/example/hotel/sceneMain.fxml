@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="GlobalPane" prefHeight="800.0" prefWidth="1237.0" style="-fx-background-color: #F8F9FA;" stylesheets="@CSS/MainScene.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotel.EngineMain">
+   <left>
+      <AnchorPane fx:id="MenuPane" prefHeight="800.0" prefWidth="250.0" style="-fx-background-color: #2C3E50; -fx-padding: 20; -fx-border-width: 0 1px 0 0; -fx-border-color: #DADFE1;">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="25.0" layoutY="41.0" spacing="20">
+               <HBox alignment="CENTER">
+                  <ImageView fx:id="Logo" fitHeight="70.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true" />
+               </HBox>
+               <HBox alignment="CENTER">
+                  <Label fx:id="GroupName" style="-fx-font-size: 26px; -fx-text-fill: white; -fx-font-weight: bold;" text="Hotel Pro" />
+               </HBox>
+               <Button fx:id="HotelBTN" onAction="#GestionHotels" styleClass="menu-button" text="Gestion des Hôtels" />
+               <Button fx:id="ChambreBTN" onAction="#GestionChambres" styleClass="menu-button" text="Gestion des Chambres" />
+               <Button fx:id="ServiceBTN" onAction="#GestionServices" styleClass="menu-button" text="Gestion des Services" />
+               <Button fx:id="ReservationBTN" onAction="#GestionReservation" styleClass="menu-button" text="Gestion des Réservations" />
+               <Button fx:id="PersonnelBTN" onAction="#GestionPersonnel" styleClass="menu-button" text="Gestion du Personnel" />
+               <Button fx:id="Settings" onAction="#Parametre" styleClass="menu-button" text="Paramètres" />
+               <Button fx:id="Logout" onAction="#Logout" styleClass="logout-button" text="Déconnexion" />
+            </VBox>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane fx:id="MainPane" prefHeight="800.0" prefWidth="994.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #DADFE1; -fx-border-width: 1px; -fx-border-radius: 8px; -fx-padding: 10;" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

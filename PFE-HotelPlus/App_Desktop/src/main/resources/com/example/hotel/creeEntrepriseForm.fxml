@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="MainPane" prefHeight="800.0" prefWidth="1200.0" stylesheets="@CSS/creeEntrepriseForm.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotel.CreeEntrepriseFormController">
+
+    <children>
+        <VBox fx:id="PrincipleVBOX" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="676.0" prefWidth="1078.0" spacing="20" style="-fx-background-color: d9d9d9;">
+            <children>
+                <VBox fx:id="CenterVBox" alignment="CENTER" maxHeight="750.0" maxWidth="540.0" prefHeight="520.0" prefWidth="540.0" style="-fx-background-color: white;">
+                    <children>
+                      <Label fx:id="LabelEntreprise" prefHeight="80.0" prefWidth="500.0" text="Créer une nouvelle entreprise" />
+                        <Label fx:id="LabelNom" prefHeight="20.0" prefWidth="300.0" text="Nom de l'entreprise" />
+                        <TextField fx:id="EntrepriseName" maxWidth="300.0" minHeight="39.0" promptText="Entrez le nom de l'entreprise" />
+                        <Label fx:id="LabelEmail" prefHeight="20.0" prefWidth="300.0" text="Email" />
+                        <TextField fx:id="EntrepriseEmail" maxWidth="300.0" minHeight="39.0" promptText="exemple@email.com" />
+                        <GridPane fx:id="LogoGridpane" maxHeight="200.0" maxWidth="200.0" minHeight="0.0" minWidth="0.0" prefHeight="36.0" prefWidth="50.0">
+                            <columnConstraints>
+                                <ColumnConstraints maxWidth="200.0" minWidth="105.0" prefWidth="134.0" />
+                                <ColumnConstraints maxWidth="119.0" minWidth="0.0" prefWidth="66.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints prefHeight="30.0" />
+                            </rowConstraints>
+                            <children>
+                                <Label fx:id="LabelLogo" prefHeight="20.0" prefWidth="175.0" text="Ajouter un Logo :" />
+                                <Button fx:id="EntrepriseLogoButton" onAction="#choisirLogo" prefHeight="40.0" prefWidth="63.0" text="Choisir" GridPane.columnIndex="1" />
+                            </children>
+                        </GridPane>
+                          <Label fx:id="EntrepriseLogo" prefHeight="48.0" prefWidth="623.0" style="-fx-alignment: center;" text="Aucun fichier sélectionné" />
+                  <Label prefHeight="26.0" prefWidth="0.0" />
+                      <GridPane fx:id="GridPaneButtons" maxHeight="60.0" maxWidth="200.0" minHeight="15.0" minWidth="50.0" prefHeight="30.0" prefWidth="100.0">
+                          <columnConstraints>
+                              <ColumnConstraints prefWidth="100.0" />
+                        <ColumnConstraints prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints prefHeight="30.0" />
+                          </rowConstraints>
+                          <children>
+                              <Button fx:id="confirmButton" onAction="#confirmSave" prefHeight="40.0" prefWidth="142.0" text="Confirmer" />
+                              <Button fx:id="cancelButton" onAction="#confirmCancel" prefHeight="40.0" prefWidth="104.0" text="Annuler" GridPane.columnIndex="1" />
+                          </children>
+                      </GridPane>
+                    </children>
+                </VBox>
+            <Label fx:id="ErrorMessage" prefHeight="40.0" prefWidth="513.0" style="-fx-font-size: 20; -fx-alignment: center;" text="" />
+            </children>
+        </VBox>
+    </children>
+</StackPane>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="547.0" prefWidth="629.0" stylesheets="@CSS/ADDform.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotel.ServiceEditFormManager">
+   <children>
+      <GridPane hgap="10" layoutX="121.0" layoutY="37.0" prefHeight="386.0" prefWidth="392.0" styleClass="form-container" vgap="10">
+         <children>
+            <Label text="Nom de l'hôtel:" GridPane.rowIndex="1" />
+            <ComboBox fx:id="hotelName" minWidth="200.0" prefHeight="25.0" prefWidth="200.0" promptText="Hotel X" stylesheets="@CSS/ComboBoxCSS.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Nom du Service :" GridPane.rowIndex="2" />
+            <ComboBox fx:id="serviceName" minWidth="200.0" prefHeight="25.0" prefWidth="200.0" promptText="Type du service" stylesheets="@CSS/ComboBoxCSS.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Prix:" GridPane.rowIndex="3" />
+            <TextField fx:id="price" promptText="Prix du service" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Description :" GridPane.rowIndex="5" />
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <children>
+                  <Button fx:id="addButton" onAction="#Edit" styleClass="primary-button" text="Modifier" />
+                  <Button fx:id="cancelButton" onAction="#cancel" styleClass="secondary-button" text="Annuler" />
+               </children>
+            </HBox>
+            <TextArea fx:id="description" prefHeight="200.0" prefWidth="207.0" promptText="Decris to service" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints minWidth="150.0" />
+            <ColumnConstraints minWidth="200.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+      </GridPane>
+      <Label fx:id="errorLabel" layoutX="167.0" layoutY="478.0" prefHeight="25.0" prefWidth="299.0" styleClass="error-label" textFill="RED" />
+   </children>
+</AnchorPane>

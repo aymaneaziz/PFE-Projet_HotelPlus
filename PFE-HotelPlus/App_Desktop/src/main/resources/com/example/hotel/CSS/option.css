@@ -1,0 +1,79 @@
+VBox {
+    -fx-padding: 20px;
+    -fx-spacing: 10px;
+    -fx-background-color: #f4f4f4;
+}
+
+Button {
+    -fx-background-color: #0078D7;
+    -fx-text-fill: white;
+    -fx-padding: 5px 10px;
+    -fx-font-size: 14px;
+    -fx-border-radius: 5px;
+}
+
+Button:hover {
+    -fx-background-color: #005a9e;
+}
+
+ChoiceBox, ListView {
+    -fx-font-size: 14px;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5px;
+}
+
+/* Style général du ComboBox */
+ComboBox {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+    -fx-pref-height: 30px;
+    -fx-pref-width: 200px;
+}
+
+/* Changer la bordure et l'effet au survol */
+ComboBox:hover {
+    -fx-border-color: #3498db;
+    -fx-cursor: hand;
+}
+
+/* Style du menu déroulant */
+.combo-box .list-cell {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #2c3e50;
+}
+
+/* Effet sur les éléments du menu lorsqu'on passe la souris */
+.combo-box .list-cell:hover {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+}
+
+/* Sélection d'un élément */
+.combo-box-popup .list-view {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 5px;
+}
+
+.combo-box-popup .list-view .list-cell:selected {
+    -fx-background-color: #2980b9;
+    -fx-text-fill: white;
+}
+
+/* Flèche du ComboBox */
+.combo-box .arrow-button {
+    -fx-background-color: #3498db;
+    -fx-background-radius: 5px;
+}
+
+.combo-box .arrow-button:hover {
+    -fx-background-color: #2980b9;
+}
+
+/* Couleur de la flèche */
+.combo-box .arrow {
+    -fx-background-color: white;
+}

@@ -1,0 +1,57 @@
+/* Style général de la galerie */
+.gallery-container {
+    -fx-padding: 15px;
+    -fx-alignment: center;
+    -fx-spacing: 10px;
+    -fx-background-color: #f5f5f5;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+}
+
+/* Conteneur des images */
+.image-box {
+    -fx-spacing: 15px;
+    -fx-alignment: center;
+    -fx-padding: 10px;
+}
+
+/* Style pour chaque conteneur d'image */
+.image-container {
+    -fx-padding: 10px;
+    -fx-border-color: #ddd;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-color: #ffffff;
+    -fx-alignment: center;
+}
+
+/* Style des boutons de suppression */
+.delete-button {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-radius: 3px;
+    -fx-padding: 5px 10px;
+}
+
+.delete-button:hover {
+    -fx-background-color: #c0392b;
+}
+
+/* Zone de glisser-déposer */
+.drag-pane {
+    -fx-border-color: #3498db;
+    -fx-border-width: 2px;
+    -fx-border-style: dashed;
+    -fx-background-color: #ecf0f1;
+    -fx-alignment: center;
+    -fx-padding: 20px;
+    -fx-border-radius: 5px;
+}
+
+.drag-text {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-fill: #2c3e50;
+}

@@ -1,0 +1,59 @@
+/* Style général */
+.form-container {
+    -fx-padding: 15;
+    -fx-background-color: #f5f5f5;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+/* Style des champs de texte */
+.text-field {
+    -fx-pref-height: 30;
+    -fx-padding: 5;
+    -fx-border-color: #aaaaaa;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+/* Style des labels */
+.label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* Style des boutons */
+.primary-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8 12;
+    -fx-border-radius: 5;
+}
+
+.primary-button:hover {
+    -fx-background-color: #45a049;
+}
+
+.secondary-button {
+    -fx-background-color: #f44336;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8 12;
+    -fx-border-radius: 5;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #d32f2f;
+}
+
+/* Style de l'erreur */
+.error-label {
+    -fx-alignment: center;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.button:hover{
+    -fx-cursor: hand;
+}

@@ -1,0 +1,104 @@
+/* Fond blanc général */
+.root {
+    -fx-background-color: #f8f9fa; /* Couleur de fond blanc cassé */
+}
+
+/* Style général des labels */
+.label {
+    -fx-text-fill: #212529; /* Noir-gris foncé */
+    -fx-font-size: 14px;
+    -fx-font-family: "Open Sans", sans-serif; /* Changer la police des labels */
+}
+
+/* Logo et nom de l'application */
+#AppName {
+    -fx-font-size: 35px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #007bff; /* Bleu vif */
+}
+
+#CenterVBox {
+    -fx-background-color: white;
+    -fx-padding: 1rem 2.5rem;
+    -fx-background-radius: 16px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 4);
+    -fx-max-width: 500px;
+    -fx-alignment: center;
+}
+
+/* Animation Slide Up */
+@keyframes slideUp {
+    from {
+        -fx-translate-y: 20px;
+        -fx-opacity: 0;
+    }
+    to {
+        -fx-translate-y: 0;
+        -fx-opacity: 1;
+    }
+}
+
+/* Champs de texte et mot de passe */
+.text-field, .password-field {
+    -fx-pref-width: 80%;
+    -fx-max-width: 300px;
+    -fx-padding: 10px;
+    -fx-border-color: #ced4da; /* Gris clair */
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-background-color: white;
+    -fx-transition: border-color 0.3s ease; /* Animation du changement de couleur */
+}
+
+/* Effet focus */
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #007bff; /* Bleu vif lorsqu'il est sélectionné */
+    -fx-border-width: 2px;
+}
+
+/* Animation sur TextField (au focus) */
+.text-field:focused, .password-field:focused {
+    -fx-transition: border-color 0.4s ease, -fx-border-width 0.4s ease; /* Transition pour la bordure */
+}
+
+/* Bouton principal (Se connecter, Rechercher) */
+.button {
+    -fx-background-color: #007bff;  /* Bleu vif */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 10px 20px;
+    -fx-transition: background-color 0.3s ease; /* Animation du changement de fond */
+}
+
+.button:hover {
+    -fx-background-color: #0056b3; /* Bleu plus foncé au survol */
+}
+
+/* Animation sur le bouton (au survol) */
+.button:hover {
+    -fx-background-color: #0056b3; /* Changement de couleur avec transition */
+    -fx-transition: background-color 0.3s ease; /* Transition fluide */
+    -fx-cursor: hand;
+}
+
+
+/* Liens et actions */
+#create {
+    -fx-text-fill: #17a2b8;  /* Bleu cyan */
+    -fx-font-weight: bold;
+}
+
+#create:hover {
+    -fx-underline: true;
+    -fx-cursor: hand;
+}
+
+#ErrorMessage {
+    -fx-text-fill: red;
+    -fx-font-size: 12px;
+    -fx-padding: 5px;
+    -fx-font-weight: bold;
+}

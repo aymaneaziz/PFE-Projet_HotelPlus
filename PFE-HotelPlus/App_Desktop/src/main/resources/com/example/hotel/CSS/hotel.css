@@ -1,0 +1,192 @@
+/* Style général */
+AnchorPane {
+    -fx-background-color: #D9D9D9;
+    -fx-padding: 20px;
+}
+
+/* Titre principal */
+.title-label {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #3498DB; /* Bleu moderne */
+    -fx-alignment: center;
+    -fx-padding: 10px;
+}
+
+/* Barre de recherche */
+.search-bar {
+    -fx-font-size: 14px;
+    -fx-padding: 8px;
+    -fx-border-color: #3498DB;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-background-color: white;
+}
+
+.search-bar:focused {
+    -fx-border-color: #2980B9;
+    -fx-background-color: #ECF0F1;
+}
+
+/* Boutons */
+.button {
+    -fx-background-color: #3498DB;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 12px;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-width: 2px;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #2980B9;
+}
+
+.button:pressed {
+    -fx-background-color: #1F6693;
+}
+
+/* TableView */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #BDC3C7;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-padding: 5px;
+}
+
+/* En-têtes des colonnes */
+.table-view .column-header-background {
+    -fx-background-color: #3498DB;
+    -fx-background-radius: 8px 8px 0 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: #2980B9;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+}
+
+/* Bordures entre les colonnes */
+.table-cell {
+    -fx-text-fill: #2C3E50;
+    -fx-alignment: CENTER;
+    -fx-border-color: #BDC3C7;
+    -fx-border-width: 0 1px 0 0;  /* Bordure droite pour séparer les colonnes */
+}
+
+/* Lignes de la TableView */
+.table-row-cell {
+    -fx-font-size: 14px;
+    -fx-text-fill: #2C3E50;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #F4F6F7;
+}
+
+.table-row-cell:even {
+    -fx-background-color: white;
+}
+
+/* Effet au survol */
+.table-row-cell:hover {
+    -fx-background-color: #D5DBDB;
+    -fx-text-fill: black;
+}
+
+/* Sélection */
+.table-row-cell:selected {
+    -fx-background-color: #3498DB;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* ScrollBar */
+.scroll-bar:vertical, .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #BDC3C7;
+    -fx-background-radius: 8px;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #AAB7B8;
+}
+
+.scroll-bar .thumb:pressed {
+    -fx-background-color: #7B7D7D;
+}
+
+/* Label pour la recherche */
+#labelSearch {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C3E50; /* Couleur sobre */
+    -fx-padding: 5px 0;
+}
+
+/* ComboBox (searchType) */
+#searchType {
+    -fx-font-size: 14px;
+    -fx-pref-height: 30px;
+    -fx-pref-width: 180px;
+    -fx-background-color: white;
+    -fx-border-color: #3498DB;
+    -fx-border-radius: 8px;
+    -fx-padding: 5px;
+}
+
+
+/* Style des boutons d'édition (vert) */
+#editButton .Button {
+    -fx-background-color: #27AE60; /* Vert */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 5px 8px;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-color: transparent;
+    -fx-content-display: text-and-graphic; /* Cache le texte */
+}
+
+/* Effets de survol et de clic pour editButton */
+#editButton .Button:hover {
+    -fx-background-color: #219150; /* Vert plus foncé */
+}
+
+#editButton .Button:pressed {
+    -fx-background-color: #1A7A40; /* Encore plus foncé */
+}
+
+/* Style des boutons de suppression (rouge) */
+#deleteButton .Button {
+    -fx-background-color: #E74C3C; /* Rouge */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 5px 8px;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-color: transparent;
+    -fx-content-display: text-and-graphic; /* Cache le texte */
+}
+
+/* Effets de survol et de clic pour deleteButton */
+#deleteButton .Button:hover {
+    -fx-background-color: #C0392B; /* Rouge plus foncé */
+}
+
+#deleteButton .Button:pressed {
+    -fx-background-color: #A93226; /* Encore plus foncé */
+}
